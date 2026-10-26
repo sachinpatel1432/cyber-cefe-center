@@ -1,0 +1,202 @@
+/* CyberDesk Admin Dashboard — scoped styles; Bootstrap remains the layout foundation. */
+.cyber-admin-dashboard {
+  --admin-ink: #172338;
+  --admin-muted: #738096;
+  --admin-line: #e7ecf4;
+  --admin-panel: #ffffff;
+  --admin-canvas: #f6f8fc;
+  color: var(--admin-ink);
+  background: transparent;
+  min-height: 60vh;
+  animation: adminDashboardEnter 420ms ease both;
+}
+
+@keyframes adminDashboardEnter {
+  from { opacity: 0; transform: translateY(7px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.cyber-admin-dashboard .admin-page-header {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(119, 145, 188, .18);
+  border-radius: 24px;
+  padding: clamp(22px, 3vw, 34px);
+  background:
+    radial-gradient(circle at 85% 0%, rgba(91, 120, 245, .13), transparent 33%),
+    linear-gradient(135deg, #fff 0%, #f8faff 100%);
+  box-shadow: 0 14px 40px rgba(28, 45, 80, .055);
+}
+
+.cyber-admin-dashboard .admin-page-header h1 {
+  color: #172338;
+  letter-spacing: -.035em;
+}
+
+.cyber-admin-dashboard .admin-page-header p { max-width: 690px; }
+.cyber-admin-dashboard .admin-section-title { color: #172338; letter-spacing: -.025em; }
+.cyber-admin-dashboard .text-secondary { color: var(--admin-muted) !important; }
+
+.cyber-admin-dashboard .card {
+  border: 1px solid rgba(226, 232, 242, .9) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 8px 24px rgba(30, 49, 86, .045) !important;
+  transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease;
+}
+
+.cyber-admin-dashboard .card:hover {
+  border-color: #d7e0f0 !important;
+  box-shadow: 0 12px 30px rgba(30, 49, 86, .075) !important;
+}
+
+.cyber-admin-dashboard .card .card-body { min-width: 0; }
+.cyber-admin-dashboard .btn { border-radius: 10px; font-weight: 600; transition: transform .15s ease, box-shadow .15s ease; }
+.cyber-admin-dashboard .btn:hover { transform: translateY(-1px); }
+.cyber-admin-dashboard .btn-primary { box-shadow: 0 5px 12px rgba(76, 139, 245, .16); }
+.cyber-admin-dashboard .badge { font-weight: 650; letter-spacing: .01em; }
+
+/* KPI tiles */
+.cyber-admin-dashboard section > .row > [class*="col-"] > .card:not(.admin-analytics-card) { height: 100%; }
+.cyber-admin-dashboard section:not(.admin-analytics-section) > .row > div > .card .card-body { padding: 22px; }
+.cyber-admin-dashboard section:not(.admin-analytics-section) > .row > div > .card h3 { color: #172338; letter-spacing: -.035em; }
+.cyber-admin-dashboard .bg-primary-subtle,
+.cyber-admin-dashboard .bg-success-subtle,
+.cyber-admin-dashboard .bg-warning-subtle,
+.cyber-admin-dashboard .bg-info-subtle { border-radius: 13px !important; }
+
+/* Analytics */
+.cyber-admin-dashboard .admin-analytics-section { margin-top: 2.2rem; }
+.cyber-admin-dashboard .admin-section-kicker {
+  display: inline-block;
+  color: #5875e8;
+  font-size: .71rem;
+  font-weight: 800;
+  letter-spacing: .13em;
+  margin-bottom: 7px;
+}
+.cyber-admin-dashboard .admin-data-note {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 11px;
+  color: #64718a;
+  background: #fff;
+  border: 1px solid var(--admin-line);
+  border-radius: 999px;
+  font-size: .78rem;
+  font-weight: 600;
+}
+.cyber-admin-dashboard .admin-analytics-card {
+  min-height: 275px;
+  padding: clamp(18px, 2vw, 25px);
+  background: var(--admin-panel);
+  border: 1px solid var(--admin-line);
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(30, 49, 86, .045);
+}
+.cyber-admin-dashboard .admin-chart-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+.cyber-admin-dashboard .admin-chart-heading h3 {
+  color: #1e2b42;
+  font-size: 1rem;
+  font-weight: 750;
+  margin: 0 0 5px;
+  letter-spacing: -.02em;
+}
+.cyber-admin-dashboard .admin-chart-heading p {
+  color: #8390a4;
+  font-size: .81rem;
+  line-height: 1.5;
+  margin: 0;
+}
+.cyber-admin-dashboard .admin-chart-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 auto;
+  color: #4c74ee;
+  background: #edf2ff;
+  border-radius: 13px;
+  font-size: 1.15rem;
+}
+.cyber-admin-dashboard .admin-chart-icon-teal { color: #138f80; background: #e7f8f4; }
+.cyber-admin-dashboard .admin-chart-icon-purple { color: #8266d8; background: #f0edff; }
+.cyber-admin-dashboard .admin-chart-icon-amber { color: #bb791a; background: #fff5e4; }
+
+.cyber-admin-dashboard .admin-donut-layout {
+  display: grid;
+  grid-template-columns: minmax(135px, .85fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(16px, 2.5vw, 30px);
+}
+.cyber-admin-dashboard .admin-donut-wrap {
+  position: relative;
+  width: min(100%, 190px);
+  aspect-ratio: 1;
+  margin-inline: auto;
+}
+.cyber-admin-dashboard .admin-donut-svg { display: block; width: 100%; height: 100%; overflow: visible; }
+.cyber-admin-dashboard .admin-donut-svg circle { transition: stroke-dasharray .25s ease, stroke-dashoffset .25s ease; }
+.cyber-admin-dashboard .admin-donut-center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+.cyber-admin-dashboard .admin-donut-center strong { color: #18263c; font-size: clamp(1.45rem, 2.2vw, 1.95rem); line-height: 1.15; letter-spacing: -.05em; }
+.cyber-admin-dashboard .admin-donut-center span { margin-top: 4px; color: #8a95a7; font-size: .72rem; font-weight: 650; text-align: center; }
+.cyber-admin-dashboard .admin-donut-legend { display: flex; flex-direction: column; gap: 15px; min-width: 0; }
+.cyber-admin-dashboard .admin-legend-row,
+.cyber-admin-dashboard .admin-legend-label { display: flex; align-items: center; }
+.cyber-admin-dashboard .admin-legend-row { justify-content: space-between; gap: 12px; color: #5b687c; font-size: .82rem; }
+.cyber-admin-dashboard .admin-legend-label { gap: 9px; min-width: 0; }
+.cyber-admin-dashboard .admin-legend-label i { display: inline-block; width: 9px; height: 9px; flex: 0 0 auto; border-radius: 3px; }
+.cyber-admin-dashboard .admin-legend-row strong { color: #1e2b42; font-size: .88rem; font-variant-numeric: tabular-nums; }
+
+.cyber-admin-dashboard .admin-bars { display: flex; flex-direction: column; gap: 21px; padding-top: 3px; }
+.cyber-admin-dashboard .admin-bar-meta { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 9px; color: #68758a; font-size: .83rem; }
+.cyber-admin-dashboard .admin-bar-meta strong { color: #1e2b42; font-size: .86rem; font-variant-numeric: tabular-nums; }
+.cyber-admin-dashboard .admin-bar-track { height: 9px; overflow: hidden; background: #eff2f8; border-radius: 999px; }
+.cyber-admin-dashboard .admin-bar-fill { display: block; height: 100%; min-width: 0; border-radius: 999px; transition: width .45s ease; }
+.cyber-admin-dashboard .admin-chart-footnote { margin-top: 24px; padding-top: 15px; border-top: 1px solid #edf0f5; color: #8792a4; font-size: .75rem; line-height: 1.55; }
+.cyber-admin-dashboard .admin-chart-empty { margin: 18px 0 0; color: #8a95a7; font-size: .8rem; }
+
+/* Management shortcuts and registrations */
+.cyber-admin-dashboard .admin-registration-panel { overflow: hidden; }
+.cyber-admin-dashboard .admin-registration-panel > .card-body > .d-flex { border-bottom: 1px solid #edf0f5; }
+.cyber-admin-dashboard .table { --bs-table-bg: transparent; color: #445168; }
+.cyber-admin-dashboard .table thead th { padding-top: 14px; padding-bottom: 14px; color: #738096; border-bottom-color: #e7ecf4; font-size: .75rem; text-transform: uppercase; letter-spacing: .04em; white-space: nowrap; }
+.cyber-admin-dashboard .table tbody td { padding-top: 15px; padding-bottom: 15px; border-bottom-color: #f0f3f8; font-size: .86rem; }
+.cyber-admin-dashboard .table tbody tr:last-child td { border-bottom: 0; }
+.cyber-admin-dashboard .table tbody tr:hover { background: #f9fbff; }
+
+@media (max-width: 767.98px) {
+  .cyber-admin-dashboard .admin-page-header { border-radius: 18px; padding: 21px; }
+  .cyber-admin-dashboard .admin-page-header .btn { flex: 1 1 auto; }
+  .cyber-admin-dashboard .admin-donut-layout { grid-template-columns: minmax(112px, .75fr) minmax(0, 1fr); gap: 13px; }
+  .cyber-admin-dashboard .admin-donut-legend { gap: 12px; }
+  .cyber-admin-dashboard .admin-legend-row { font-size: .76rem; }
+  .cyber-admin-dashboard .admin-analytics-card { border-radius: 17px; }
+  .cyber-admin-dashboard .admin-chart-heading { margin-bottom: 19px; }
+}
+
+@media (max-width: 390px) {
+  .cyber-admin-dashboard .admin-donut-layout { grid-template-columns: 1fr; }
+  .cyber-admin-dashboard .admin-donut-wrap { width: 155px; }
+  .cyber-admin-dashboard .admin-donut-legend { max-width: 260px; width: 100%; margin-inline: auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cyber-admin-dashboard,
+  .cyber-admin-dashboard .card,
+  .cyber-admin-dashboard .admin-bar-fill { animation: none !important; transition: none !important; }
+}

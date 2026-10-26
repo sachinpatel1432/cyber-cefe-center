@@ -1,0 +1,111 @@
+.cyber-register-page {
+  --cr-ink: #17233f;
+  --cr-muted: #76819a;
+  --cr-primary: #4263eb;
+  --cr-line: #e4e9f2;
+  min-height: calc(100vh - 1px);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 34px 22px;
+  background: #f4f6fb;
+  color: var(--cr-ink);
+  isolation: isolate;
+}
+.cyber-register-glow { position: absolute; border-radius: 50%; filter: blur(2px); pointer-events: none; z-index: -1; }
+.cyber-register-glow-one { width: 420px; height: 420px; background: radial-gradient(circle, rgba(83,111,245,.13), transparent 68%); top: -160px; right: -120px; }
+.cyber-register-glow-two { width: 500px; height: 500px; background: radial-gradient(circle, rgba(32,196,173,.10), transparent 70%); bottom: -230px; left: -200px; }
+.cyber-register-shell { width: min(1140px, 100%); min-height: 700px; display: grid; grid-template-columns: .88fr 1.12fr; overflow: hidden; border: 1px solid rgba(218,225,239,.85); border-radius: 28px; background: #fff; box-shadow: 0 28px 85px rgba(26,43,85,.13); }
+.cyber-register-aside { background: linear-gradient(150deg, #111c38 0%, #1c2d56 54%, #263e75 100%); color: #fff; padding: 38px 38px 28px; display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden; }
+.cyber-register-aside::before { content: ""; position: absolute; width: 430px; height: 430px; border: 1px solid rgba(255,255,255,.09); border-radius: 50%; right: -230px; top: 135px; box-shadow: 0 0 0 40px rgba(255,255,255,.025), 0 0 0 80px rgba(255,255,255,.018); pointer-events: none; }
+.cyber-register-brand { display: inline-flex; align-items: center; gap: 11px; color: inherit; font-size: 22px; font-weight: 800; letter-spacing: -.7px; text-decoration: none; width: fit-content; position: relative; z-index: 1; }
+.cyber-register-brand > span:last-child > span { color: #88a4ff; }
+.cyber-register-brand-mark { display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 13px; color: white; background: linear-gradient(135deg, #6382ff, #7658ea); box-shadow: 0 8px 22px rgba(67,90,220,.32); font-size: 21px; }
+.cyber-register-aside-content { margin: 68px 0 52px; position: relative; z-index: 1; }
+.cyber-register-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 10px; letter-spacing: 1.6px; font-weight: 800; color: #9fb4ff; }
+.cyber-register-aside h1 { max-width: 430px; margin: 19px 0 17px; font-size: clamp(32px, 3vw, 44px); line-height: 1.11; font-weight: 800; letter-spacing: -1.9px; }
+.cyber-register-aside h1 span { color: #9fb4ff; }
+.cyber-register-aside-content > p { max-width: 400px; color: #c0cbe2; font-size: 14px; line-height: 1.8; margin: 0; }
+.cyber-register-intent { margin-top: 28px; display: flex; align-items: flex-start; gap: 12px; border-radius: 16px; border: 1px solid rgba(169,189,255,.25); background: rgba(255,255,255,.07); padding: 15px; }
+.cyber-register-intent-icon { display: grid; place-items: center; flex: 0 0 35px; height: 35px; border-radius: 11px; background: rgba(124,153,255,.2); color: #bfd0ff; font-size: 18px; }
+.cyber-register-intent > div { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.cyber-register-intent small { font-size: 9px; letter-spacing: 1.2px; color: #a9bbeb; font-weight: 800; }
+.cyber-register-intent strong { font-size: 14px; color: #fff; }
+.cyber-register-intent span:last-child { font-size: 11px; color: #c0cbe2; }
+.cyber-register-benefits { display: grid; gap: 22px; margin-top: 37px; }
+.cyber-register-benefits > div { display: flex; gap: 12px; align-items: flex-start; }
+.cyber-register-benefits > div > span { flex: 0 0 28px; height: 28px; border-radius: 9px; display: grid; place-items: center; background: rgba(105,226,197,.14); color: #7ae0cb; }
+.cyber-register-benefits strong, .cyber-register-benefits small { display: block; }
+.cyber-register-benefits strong { font-size: 12px; font-weight: 700; margin-bottom: 3px; }
+.cyber-register-benefits small { font-size: 11px; color: #b8c5dd; line-height: 1.5; }
+.cyber-register-aside-footer { display: flex; flex-wrap: wrap; align-items: center; gap: 9px; color: #aab9d5; font-size: 11px; position: relative; z-index: 1; }
+.cyber-register-aside-footer i { color: #77dfc7; }
+.cyber-register-form-panel { padding: 43px clamp(32px, 5vw, 68px) 30px; display: flex; flex-direction: column; justify-content: center; min-width: 0; }
+.cyber-register-mobile-brand { display: none; }
+.cyber-register-form-heading { margin-bottom: 25px; }
+.cyber-register-step { display: flex; justify-content: space-between; align-items: center; color: var(--cr-primary); font-size: 10px; font-weight: 800; letter-spacing: 1.4px; margin-bottom: 12px; }
+.cyber-register-step span { color: #98a2b7; letter-spacing: .6px; }
+.cyber-register-form-heading h2 { font-size: clamp(27px, 2.8vw, 34px); letter-spacing: -1px; line-height: 1.2; font-weight: 800; margin: 0 0 8px; }
+.cyber-register-form-heading p { color: var(--cr-muted); font-size: 13px; line-height: 1.6; margin: 0; }
+.cyber-register-form { display: grid; gap: 14px; }
+.cyber-register-field { min-width: 0; }
+.cyber-register-field > label { display: flex; align-items: center; gap: 5px; font-size: 12px; color: #263653; font-weight: 750; margin-bottom: 7px; }
+.cyber-register-field > label > span { color: #e25f70; }
+.cyber-register-field > label > small { margin-left: auto; color: #98a2b4; font-size: 10px; font-weight: 600; }
+.cyber-register-input-wrap { height: 47px; display: flex; align-items: center; gap: 10px; border: 1px solid var(--cr-line); border-radius: 12px; padding: 0 13px; background: #fbfcff; transition: border-color .18s ease, box-shadow .18s ease, background .18s ease; }
+.cyber-register-input-wrap:focus-within { border-color: #8ea2ff; background: #fff; box-shadow: 0 0 0 3px rgba(66,99,235,.10); }
+.cyber-register-input-wrap > i:first-child { flex: 0 0 auto; color: #8d99b0; font-size: 16px; }
+.cyber-register-input-wrap input { min-width: 0; width: 100%; height: 100%; padding: 0; border: 0; outline: 0; background: transparent; color: #1c2945; font-size: 12px; box-shadow: none !important; }
+.cyber-register-input-wrap input::placeholder { color: #a3adbf; }
+.cyber-register-input-wrap input:disabled { opacity: .7; }
+.cyber-register-toggle { border: 0; background: transparent; color: #8591a8; padding: 5px; line-height: 1; font-size: 16px; }
+.cyber-register-toggle:hover { color: var(--cr-primary); }
+.cyber-register-toggle:disabled { opacity: .5; }
+.cyber-register-field > small { display: block; font-size: 10px; line-height: 1.45; color: #8490a7; margin-top: 6px; }
+.cyber-register-password-meter { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5px; margin-top: 9px; }
+.cyber-register-password-meter > div { height: 3px; border-radius: 10px; background: #e8edf5; transition: background .18s ease; }
+.cyber-register-password-meter > div.is-filled { background: #6c83f4; }
+.cyber-register-input-wrap.has-error { border-color: #e26c79; }
+.cyber-register-input-wrap.has-success { border-color: #39b89c; }
+.cyber-register-field > small.cyber-register-field-error { color: #ca4756; }
+.cyber-register-field > small.cyber-register-field-success { color: #16866f; }
+.cyber-register-alert { display: flex; align-items: flex-start; gap: 10px; padding: 11px 13px; border-radius: 12px; font-size: 12px; line-height: 1.55; margin: -7px 0 18px; }
+.cyber-register-alert > i { margin-top: 1px; }
+.cyber-register-alert > span { flex: 1; }
+.cyber-register-alert > button { border: 0; background: transparent; color: currentColor; font-size: 20px; line-height: 1; opacity: .7; }
+.cyber-register-alert.is-error { background: #fff0f1; border: 1px solid #ffd5d9; color: #ad3140; }
+.cyber-register-alert.is-success { background: #eafaf5; border: 1px solid #c6f0e3; color: #137b63; }
+.cyber-register-submit { width: 100%; min-height: 49px; margin-top: 3px; border: 0; border-radius: 12px; display: flex; align-items: center; justify-content: center; gap: 9px; color: #fff; background: linear-gradient(100deg, #4263eb 0%, #5a61e9 100%); box-shadow: 0 9px 20px rgba(66,99,235,.2); font-size: 13px; font-weight: 800; transition: transform .15s ease, box-shadow .15s ease, opacity .15s ease; }
+.cyber-register-submit:hover:not(:disabled) { transform: translateY(-1px); box-shadow: 0 12px 25px rgba(66,99,235,.27); }
+.cyber-register-submit:disabled { opacity: .7; cursor: not-allowed; }
+.cyber-register-submit .spinner-border { width: 15px; height: 15px; }
+.cyber-register-terms { display: flex; align-items: flex-start; gap: 7px; justify-content: center; text-align: center; color: #929db1; font-size: 10px; line-height: 1.5; margin: 0; }
+.cyber-register-terms i { color: #7d8ca7; }
+.cyber-register-login-prompt { border-top: 1px solid #eef1f7; padding-top: 19px; margin-top: 20px; text-align: center; color: #7b879c; font-size: 12px; }
+.cyber-register-login-prompt a { color: var(--cr-primary); font-weight: 800; text-decoration: none; margin-left: 4px; }
+.cyber-register-login-prompt a:hover { text-decoration: underline; }
+.cyber-register-home-link { display: flex; align-items: center; justify-content: center; gap: 7px; margin-top: 15px; color: #8792a6; font-size: 11px; text-decoration: none; }
+.cyber-register-home-link:hover { color: var(--cr-primary); }
+@media (max-width: 900px) {
+  .cyber-register-page { padding: 22px 16px; }
+  .cyber-register-shell { grid-template-columns: .78fr 1.22fr; }
+  .cyber-register-aside { padding: 30px 25px 24px; }
+  .cyber-register-form-panel { padding: 35px 30px 26px; }
+  .cyber-register-aside h1 { font-size: 34px; }
+}
+@media (max-width: 700px) {
+  .cyber-register-page { padding: 12px; align-items: flex-start; }
+  .cyber-register-shell { display: block; min-height: 0; border-radius: 22px; }
+  .cyber-register-aside { display: none; }
+  .cyber-register-form-panel { padding: 25px 22px 22px; }
+  .cyber-register-mobile-brand { display: block; margin-bottom: 28px; }
+  .cyber-register-brand { font-size: 20px; }
+  .cyber-register-brand-mark { width: 38px; height: 38px; border-radius: 11px; }
+  .cyber-register-form-heading h2 { font-size: 29px; }
+  .cyber-register-form { gap: 13px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cyber-register-input-wrap, .cyber-register-password-meter > div, .cyber-register-submit { transition: none; }
+}

@@ -1,0 +1,226 @@
+/* CyberDesk profile overview — scoped so other pages remain untouched. */
+.cyber-profile-page {
+  --profile-ink: #172033;
+  --profile-muted: #667085;
+  --profile-border: #e7ebf2;
+  --profile-primary: #4f67e8;
+  color: var(--profile-ink);
+  max-width: 1440px;
+  animation: profilePageEnter .38s ease both;
+}
+
+@keyframes profilePageEnter {
+  from { opacity: 0; transform: translateY(7px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.cyber-profile-page .profile-page-heading {
+  padding: 1.35rem 1.5rem;
+  border: 1px solid var(--profile-border);
+  border-radius: 1.25rem;
+  background:
+    radial-gradient(circle at 88% 12%, rgba(94, 115, 255, .11), transparent 30%),
+    linear-gradient(135deg, #fff 0%, #f9faff 100%);
+}
+
+.cyber-profile-page .profile-page-heading .badge {
+  letter-spacing: .08em;
+  font-size: .68rem;
+  font-weight: 800;
+  padding: .5rem .7rem;
+  border-radius: 999px;
+}
+
+.cyber-profile-page .profile-page-heading h1 {
+  color: var(--profile-ink);
+  letter-spacing: -.035em;
+}
+
+.cyber-profile-page .profile-sidebar-card,
+.cyber-profile-page .profile-content-card {
+  border: 1px solid var(--profile-border) !important;
+  box-shadow: 0 8px 30px rgba(21, 34, 66, .055) !important;
+  background: #fff;
+  transition: box-shadow .2s ease, transform .2s ease;
+}
+
+.cyber-profile-page .profile-sidebar-card {
+  overflow: hidden;
+  position: relative;
+}
+
+.cyber-profile-page .profile-sidebar-card::before {
+  content: "";
+  display: block;
+  height: 5px;
+  background: linear-gradient(90deg, #4f67e8, #7c58d5, #31b8ba);
+}
+
+.cyber-profile-page .profile-sidebar-card .card-body {
+  padding: 1.7rem !important;
+}
+
+.cyber-profile-page .profile-sidebar-card img,
+.cyber-profile-page .profile-sidebar-card .rounded-circle.overflow-hidden {
+  box-shadow: 0 0 0 5px #f0f3ff, 0 8px 24px rgba(34, 52, 108, .12);
+}
+
+.cyber-profile-page .profile-sidebar-card h2 {
+  letter-spacing: -.025em;
+  overflow-wrap: anywhere;
+}
+
+.cyber-profile-page .profile-content-card {
+  overflow: hidden;
+}
+
+.cyber-profile-page .profile-content-card .card-body {
+  padding: clamp(1.15rem, 2.3vw, 1.75rem) !important;
+}
+
+.cyber-profile-page .profile-content-card h2 {
+  display: flex;
+  align-items: center;
+  gap: .25rem;
+  letter-spacing: -.02em;
+}
+
+.cyber-profile-page .profile-content-card h2 > i {
+  display: inline-flex;
+  width: 2.3rem;
+  height: 2.3rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: .75rem;
+  background: #eef2ff;
+  color: var(--profile-primary) !important;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.cyber-profile-page .form-label {
+  color: #344054;
+  font-size: .875rem;
+}
+
+.cyber-profile-page .form-control {
+  min-height: 44px;
+  border-color: #dfe4ec;
+  border-radius: .7rem;
+  color: #1d2939;
+  box-shadow: none;
+  transition: border-color .18s ease, box-shadow .18s ease, background .18s ease;
+}
+
+.cyber-profile-page textarea.form-control {
+  min-height: 108px;
+  resize: vertical;
+}
+
+.cyber-profile-page .form-control:focus {
+  border-color: #8998ff;
+  box-shadow: 0 0 0 .22rem rgba(79, 103, 232, .12);
+}
+
+.cyber-profile-page .form-control:disabled,
+.cyber-profile-page .form-control[readonly] {
+  background: #f8f9fc;
+  color: #475467;
+  opacity: 1;
+}
+
+.cyber-profile-page .btn {
+  border-radius: .7rem;
+  font-weight: 650;
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+}
+
+.cyber-profile-page .btn-primary {
+  border-color: var(--profile-primary);
+  background: linear-gradient(135deg, #4f67e8 0%, #654dd5 100%);
+  box-shadow: 0 5px 12px rgba(79, 103, 232, .15);
+}
+
+.cyber-profile-page .btn-primary:hover:not(:disabled) {
+  box-shadow: 0 8px 18px rgba(79, 103, 232, .24);
+  transform: translateY(-1px);
+}
+
+.cyber-profile-page .btn:disabled {
+  cursor: not-allowed;
+}
+
+.cyber-profile-page .profile-completion-panel {
+  padding: 1rem;
+  border: 1px solid #e8ecfb;
+  border-radius: .9rem;
+  background: linear-gradient(135deg, #f7f8ff, #fbfcff);
+}
+
+.cyber-profile-page .profile-completion-panel strong {
+  color: var(--profile-primary);
+}
+
+.cyber-profile-page .profile-completion-progress {
+  height: 7px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #e6eaf6;
+}
+
+.cyber-profile-page .profile-completion-progress .progress-bar {
+  border-radius: 999px;
+  background: linear-gradient(90deg, #4f67e8, #26aaa9);
+  transition: width .25s ease;
+}
+
+.cyber-profile-page .alert {
+  border-radius: .85rem;
+  border-width: 1px;
+}
+
+.cyber-profile-page .badge {
+  font-weight: 650;
+  letter-spacing: .01em;
+}
+
+.cyber-profile-page .text-secondary {
+  color: var(--profile-muted) !important;
+}
+
+@media (min-width: 992px) {
+  .cyber-profile-page .profile-sidebar-card {
+    position: sticky;
+    top: 1.25rem;
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .cyber-profile-page {
+    padding-left: .9rem;
+    padding-right: .9rem;
+  }
+  .cyber-profile-page .profile-page-heading {
+    padding: 1.1rem;
+    align-items: flex-start !important;
+  }
+  .cyber-profile-page .profile-page-heading > div:first-child {
+    min-width: 0;
+  }
+  .cyber-profile-page .profile-page-heading .btn {
+    width: 100%;
+  }
+  .cyber-profile-page .profile-sidebar-card .card-body {
+    padding: 1.25rem !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cyber-profile-page,
+  .cyber-profile-page * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

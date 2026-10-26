@@ -1,0 +1,31 @@
+.cd-not-found { --cd-ink: #182440; position: relative; display: grid; place-items: center; min-height: calc(100vh - 100px); padding: 2.5rem 1rem; overflow: hidden; color: var(--cd-ink); background: radial-gradient(circle at 50% 35%, #fff 0, #f7f8ff 48%, #f1f5fc 100%); }
+.cd-not-found-grid { position: absolute; inset: 0; opacity: .35; pointer-events: none; background-image: linear-gradient(rgba(81, 105, 225, .055) 1px, transparent 1px), linear-gradient(90deg, rgba(81, 105, 225, .055) 1px, transparent 1px); background-size: 38px 38px; mask-image: linear-gradient(to bottom, transparent, #000 20%, #000 85%, transparent); }
+.cd-not-found-content { position: relative; z-index: 1; display: flex; align-items: center; flex-direction: column; width: min(100%, 720px); text-align: center; animation: cdNotFoundEnter .4s ease both; }
+.cd-not-found-brand { display: inline-flex; align-items: center; gap: .7rem; color: #172541; font-size: 1.25rem; font-weight: 850; letter-spacing: -.04em; text-decoration: none; }
+.cd-not-found-brand > span:last-child span { color: #5269ed; }
+.cd-not-found-mark { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 15px; color: #fff; background: linear-gradient(140deg, #5e79ff, #4058db); box-shadow: 0 8px 20px rgba(61, 85, 215, .22); font-size: 1.3rem; }
+.cd-not-found-visual { position: relative; display: grid; place-items: center; width: min(100%, 400px); height: 230px; margin: .5rem 0 -.1rem; }
+.cd-not-found-number { position: relative; z-index: 1; color: #e9edff; font-size: clamp(7rem, 22vw, 12rem); line-height: 1; font-weight: 900; letter-spacing: -.09em; text-shadow: 0 8px 0 #dce3ff, 0 24px 45px rgba(61, 82, 180, .13); }
+.cd-not-found-orbit { position: absolute; border: 1px solid #dce3ff; border-radius: 50%; }
+.cd-not-found-orbit-a { width: 185px; height: 185px; }
+.cd-not-found-orbit-b { width: 270px; height: 110px; transform: rotate(-25deg); border-style: dashed; }
+.cd-not-found-floating { position: absolute; z-index: 2; display: grid; place-items: center; width: 47px; height: 47px; border: 1px solid #e3e8fa; border-radius: 15px; color: #5268df; background: rgba(255,255,255,.92); box-shadow: 0 10px 24px rgba(31, 48, 100, .1); font-size: 1.2rem; }
+.cd-float-one { top: 33px; left: 42px; transform: rotate(-12deg); }
+.cd-float-two { top: 58px; right: 28px; color: #168e85; transform: rotate(10deg); }
+.cd-float-three { bottom: 20px; right: 74px; color: #8e62d7; transform: rotate(-8deg); }
+.cd-not-found-eyebrow { padding: .4rem .7rem; border: 1px solid #e0e6ff; border-radius: 999px; color: #586de0; background: #f7f8ff; font-size: .72rem; font-weight: 850; letter-spacing: .14em; }
+.cd-not-found-content h1 { margin: 1rem 0 .6rem; font-size: clamp(1.9rem, 5vw, 2.8rem); font-weight: 850; letter-spacing: -.055em; }
+.cd-not-found-content > p { max-width: 500px; margin: 0; color: #748098; line-height: 1.7; }
+.cd-not-found-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: .75rem; margin-top: 1.65rem; }
+.cd-not-found-primary, .cd-not-found-secondary { display: inline-flex; align-items: center; justify-content: center; gap: .55rem; min-height: 48px; padding: .8rem 1.2rem; border-radius: 13px; text-decoration: none; font-size: .9rem; font-weight: 750; transition: transform .16s ease, box-shadow .16s ease; }
+.cd-not-found-primary { color: #fff; border: 1px solid #4059df; background: linear-gradient(110deg, #526df5, #3955dc); box-shadow: 0 8px 20px rgba(66, 89, 220, .2); }
+.cd-not-found-primary:hover { color: #fff; transform: translateY(-1px); box-shadow: 0 12px 24px rgba(66, 89, 220, .25); }
+.cd-not-found-secondary { color: #34415a; border: 1px solid #dce3ef; background: #fff; }
+.cd-not-found-secondary:hover { color: #3e58d9; border-color: #c5ceff; }
+.cd-not-found-help { display: flex; align-items: center; gap: .45rem; margin-top: 1.5rem; color: #8b95a9; font-size: .79rem; }
+.cd-not-found-help i { color: #7c8dec; }
+.cd-not-found-content footer { margin-top: 2.8rem; color: #9aa3b4; font-size: .76rem; }
+.cd-not-found-content footer span { margin: 0 .45rem; }
+@keyframes cdNotFoundEnter { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 520px) { .cd-not-found-visual { height: 190px; } .cd-not-found-actions { width: 100%; flex-direction: column; } .cd-not-found-actions a { width: 100%; } .cd-float-one { left: 8px; } .cd-float-two { right: 7px; } .cd-float-three { right: 35px; } }
+@media (prefers-reduced-motion: reduce) { .cd-not-found-content { animation: none; } .cd-not-found-primary, .cd-not-found-secondary { transition: none; } }

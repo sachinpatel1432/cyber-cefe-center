@@ -1,0 +1,30 @@
+.cd-orders-panel { --cd-orders-ink: #182540; --cd-orders-muted: #738099; color: var(--cd-orders-ink); }
+.cd-orders-heading { display: flex; justify-content: space-between; align-items: flex-end; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+.cd-orders-eyebrow { display: inline-block; margin-bottom: .45rem; color: #5b72e9; font-size: .7rem; font-weight: 800; letter-spacing: .14em; }
+.cd-orders-panel .overview-section-heading h2 { margin-bottom: .4rem; font-size: clamp(1.5rem, 3vw, 1.9rem); font-weight: 800; letter-spacing: -.04em; }
+.cd-orders-panel .overview-section-heading p { color: var(--cd-orders-muted); margin-bottom: 0; }
+.cd-orders-heading-link { display: inline-flex; align-items: center; gap: .5rem; color: #3e5ae0; font-size: .88rem; font-weight: 750; text-decoration: none; }
+.cd-orders-heading-link:hover { color: #293fb7; }
+.cd-orders-empty-state { position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: center; padding: clamp(2rem, 5vw, 3.5rem) 1.3rem; border: 1px solid #e7ecf6; border-radius: 24px; background: radial-gradient(circle at 50% 0, rgba(92, 116, 245, .08), transparent 18rem), #fff; text-align: center; }
+.cd-orders-illustration { position: relative; display: grid; place-items: center; width: 142px; height: 142px; margin-bottom: 1rem; }
+.cd-orders-orbit { position: absolute; display: block; border: 1px dashed #d5ddff; border-radius: 50%; }
+.cd-orders-orbit-one { inset: 5px; }
+.cd-orders-orbit-two { inset: 20px; border-style: solid; border-color: #e8ecff; }
+.cd-orders-document { position: relative; z-index: 1; display: grid; place-items: center; width: 76px; height: 88px; border: 1px solid #dfe5ff; border-radius: 18px; color: #4d65e6; background: linear-gradient(145deg, #fff, #f2f4ff); box-shadow: 0 15px 30px rgba(52, 75, 178, .12); font-size: 2.3rem; }
+.cd-orders-spark { position: absolute; z-index: 2; display: grid; place-items: center; width: 33px; height: 33px; border: 3px solid #fff; border-radius: 12px; box-shadow: 0 6px 15px rgba(29, 46, 91, .1); }
+.cd-orders-spark-one { top: 20px; right: 6px; color: #13845d; background: #dff8eb; }
+.cd-orders-spark-two { bottom: 17px; left: 3px; color: #8e63d9; background: #f0e8ff; }
+.cd-orders-status-pill { display: inline-flex; align-items: center; gap: .45rem; padding: .4rem .75rem; border: 1px solid #e1e7ff; border-radius: 999px; color: #4c61c9; background: #f4f6ff; font-size: .74rem; font-weight: 750; }
+.cd-orders-empty-state h3 { max-width: 570px; margin: 1rem 0 .55rem; font-size: clamp(1.35rem, 3vw, 1.8rem); font-weight: 800; letter-spacing: -.04em; }
+.cd-orders-empty-state > p { max-width: 570px; margin: 0; color: var(--cd-orders-muted); font-size: .94rem; line-height: 1.7; }
+.cd-orders-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: .75rem; margin-top: 1.5rem; }
+.cd-orders-primary, .cd-orders-secondary { display: inline-flex; align-items: center; justify-content: center; gap: .55rem; min-height: 45px; padding: .75rem 1.1rem; border-radius: 12px; font-size: .87rem; font-weight: 750; text-decoration: none; transition: transform .16s ease, box-shadow .16s ease; }
+.cd-orders-primary { border: 1px solid #4560e7; color: #fff; background: linear-gradient(110deg, #526df5, #3955dc); box-shadow: 0 7px 18px rgba(66, 89, 220, .18); }
+.cd-orders-primary:hover { color: #fff; transform: translateY(-1px); box-shadow: 0 10px 22px rgba(66, 89, 220, .24); }
+.cd-orders-secondary { border: 1px solid #dfe5ef; color: #3c4962; background: #fff; }
+.cd-orders-secondary:hover { color: #354fd0; border-color: #bdc9ff; }
+.cd-orders-feature-row { display: flex; justify-content: center; flex-wrap: wrap; gap: 1.15rem; margin-top: 1.7rem; padding-top: 1.25rem; width: min(100%, 620px); border-top: 1px solid #edf0f6; color: #7a879d; font-size: .77rem; }
+.cd-orders-feature-row span { display: inline-flex; align-items: center; gap: .4rem; }
+.cd-orders-feature-row i { color: #4e67e8; }
+@media (max-width: 600px) { .cd-orders-actions { width: 100%; flex-direction: column; } .cd-orders-actions a { width: 100%; } .cd-orders-feature-row { align-items: flex-start; flex-direction: column; gap: .75rem; } }
+@media (prefers-reduced-motion: reduce) { .cd-orders-primary, .cd-orders-secondary { transition: none; } }

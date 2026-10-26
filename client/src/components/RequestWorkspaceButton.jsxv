@@ -1,0 +1,33 @@
+import { useNavigate } from "react-router-dom";
+
+export default function RequestWorkspaceButton({
+  requestId,
+  className = "",
+  children = "Open Conversation",
+}) {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    if (!requestId) {
+      console.error("Request ID is missing.");
+      return;
+    }
+
+    navigate(
+      `/requests/${encodeURIComponent(String(requestId))}/workspace`
+    );
+  };
+
+  return (
+    <button
+      type="button"
+      className={`btn btn-outline-primary ${className}`.trim()}
+      onClick={handleClick}
+      disabled={!requestId}
+      title="Open request conversation"
+    >
+      <i className="bi bi-chat-dots me-2" aria-hidden="true" />
+      {children}
+    </button>
+  );
+}

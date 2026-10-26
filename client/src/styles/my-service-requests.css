@@ -1,0 +1,278 @@
+/* CyberDesk customer request center — scoped styles */
+.cyber-my-requests {
+  --myreq-ink: #17233d;
+  --myreq-muted: #718096;
+  --myreq-line: #e6ebf3;
+  --myreq-blue: #3867ed;
+  color: var(--myreq-ink);
+  max-width: 1680px;
+  margin-inline: auto;
+}
+
+.cyber-my-requests .my-requests-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(1.35rem, 3vw, 2.2rem);
+  border: 1px solid #e5eaf6;
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 91% 14%, rgba(94, 132, 255, .16), transparent 28%),
+    linear-gradient(120deg, #fff 0%, #f7f9ff 60%, #f0f5ff 100%);
+}
+
+.cyber-my-requests .my-requests-hero::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 180px;
+  height: 180px;
+  right: 7%;
+  bottom: -115px;
+  border: 28px solid rgba(56, 103, 237, .07);
+  border-radius: 50%;
+}
+
+.cyber-my-requests .my-requests-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  padding: .45rem .75rem;
+  border: 1px solid #dbe5ff;
+  border-radius: 999px;
+  background: #eef3ff;
+  color: #345ad0;
+  font-size: .73rem;
+  font-weight: 800;
+  letter-spacing: .09em;
+}
+
+.cyber-my-requests .my-requests-hero h1 {
+  color: var(--myreq-ink);
+  letter-spacing: -.035em;
+}
+
+.cyber-my-requests .my-requests-hero p {
+  max-width: 760px;
+  color: #67748d !important;
+  line-height: 1.65;
+}
+
+.cyber-my-requests .btn {
+  border-radius: 10px;
+  font-weight: 650;
+  transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease;
+}
+
+.cyber-my-requests .btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.cyber-my-requests .btn-primary {
+  box-shadow: 0 5px 14px rgba(56, 103, 237, .14);
+}
+
+.cyber-my-requests .card {
+  border-radius: 18px !important;
+  border-color: var(--myreq-line) !important;
+}
+
+.cyber-my-requests .card-header {
+  border-radius: 18px 18px 0 0;
+}
+
+.cyber-my-requests section.card > .card-header {
+  background: #fff !important;
+  border-bottom: 1px solid var(--myreq-line) !important;
+}
+
+.cyber-my-requests .form-control,
+.cyber-my-requests .form-select,
+.cyber-my-requests .input-group-text {
+  min-height: 44px;
+  border-color: #dce3ef;
+  border-radius: 10px;
+  box-shadow: none;
+}
+
+.cyber-my-requests .input-group > .input-group-text {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  background: #f8faff;
+  color: #77849b;
+}
+
+.cyber-my-requests .input-group > .form-control {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.cyber-my-requests .form-control:focus,
+.cyber-my-requests .form-select:focus {
+  border-color: #91aaff;
+  box-shadow: 0 0 0 .2rem rgba(56, 103, 237, .11);
+}
+
+.cyber-my-requests .my-request-card {
+  transition: box-shadow .2s ease, transform .2s ease, border-color .2s ease;
+  background: #fff;
+}
+
+.cyber-my-requests .my-request-card:hover {
+  box-shadow: 0 12px 34px rgba(24, 43, 83, .07) !important;
+}
+
+.cyber-my-requests .my-request-card.is-expanded {
+  border-color: #cbd8ff !important;
+  box-shadow: 0 14px 34px rgba(41, 77, 160, .09) !important;
+}
+
+.cyber-my-requests .my-request-card-header {
+  background: linear-gradient(110deg, #f8faff, #f6f8fc) !important;
+  border-bottom: 1px solid var(--myreq-line) !important;
+}
+
+.cyber-my-requests .my-request-card-header h3 {
+  color: var(--myreq-ink);
+  overflow-wrap: anywhere;
+}
+
+.cyber-my-requests .my-request-card-header .small.text-secondary {
+  color: #77839a !important;
+}
+
+.cyber-my-requests .my-request-card-header > div > div:first-child .small:first-child {
+  text-transform: uppercase;
+  font-size: .7rem;
+  font-weight: 800;
+  letter-spacing: .075em;
+}
+
+.cyber-my-requests .my-request-card-header .badge,
+.cyber-my-requests .my-request-card .badge {
+  padding: .48rem .65rem;
+  font-weight: 700;
+  letter-spacing: .01em;
+  border-radius: 8px;
+}
+
+.cyber-my-requests .my-request-toggle {
+  white-space: nowrap;
+  background: #fff;
+}
+
+.cyber-my-requests .my-request-summary {
+  background: #fff;
+}
+
+.cyber-my-requests .my-request-summary-label {
+  margin-bottom: .3rem;
+  color: #7b879c;
+  font-size: .73rem;
+  font-weight: 750;
+  letter-spacing: .045em;
+  text-transform: uppercase;
+}
+
+.cyber-my-requests .my-request-summary .fw-semibold,
+.cyber-my-requests .my-request-summary .fw-bold {
+  overflow-wrap: anywhere;
+}
+
+.cyber-my-requests .my-request-price {
+  color: #1a2d52;
+  font-size: 1.12rem;
+}
+
+.cyber-my-requests .my-request-summary-footer {
+  border-top: 1px solid #edf0f6;
+}
+
+.cyber-my-requests .my-request-details {
+  background: #fff;
+  animation: myRequestReveal .22s ease-out;
+}
+
+.cyber-my-requests .my-request-details section > h4,
+.cyber-my-requests .my-request-details section > h3 {
+  color: #263653;
+}
+
+.cyber-my-requests .my-request-details .border.rounded-3 {
+  border-color: #e5eaf2 !important;
+  border-radius: 13px !important;
+}
+
+.cyber-my-requests .my-request-details .table {
+  --bs-table-bg: transparent;
+  margin-bottom: 0;
+}
+
+.cyber-my-requests .my-request-details .table th {
+  color: #68768e;
+  font-size: .76rem;
+  font-weight: 750;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+
+.cyber-my-requests .my-request-details .alert {
+  border-radius: 12px;
+}
+
+.cyber-my-requests .card-footer {
+  border-top: 1px solid var(--myreq-line) !important;
+  background: #fff !important;
+}
+
+.cyber-my-requests .text-secondary {
+  color: #738097 !important;
+}
+
+.cyber-my-requests .spinner-border {
+  width: 2.2rem;
+  height: 2.2rem;
+}
+
+@keyframes myRequestReveal {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 767.98px) {
+  .cyber-my-requests {
+    padding-inline: .8rem !important;
+  }
+  .cyber-my-requests .my-requests-hero {
+    border-radius: 18px;
+    padding: 1.25rem;
+  }
+  .cyber-my-requests .my-requests-hero .btn {
+    flex: 1 1 auto;
+  }
+  .cyber-my-requests .my-request-card-header > div {
+    align-items: flex-start !important;
+  }
+  .cyber-my-requests .my-request-card-header > div > div:last-child {
+    justify-content: flex-start !important;
+    width: 100%;
+  }
+  .cyber-my-requests .my-request-summary {
+    padding-block: 1rem !important;
+  }
+  .cyber-my-requests .my-request-summary-footer span:last-child {
+    width: 100%;
+  }
+  .cyber-my-requests .my-request-details .btn {
+    white-space: normal;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cyber-my-requests *,
+  .cyber-my-requests *::before,
+  .cyber-my-requests *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

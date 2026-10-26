@@ -1,122 +1,188 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { AuthProvider } from "./context/AuthContext";
+
+import AppLayout from "./components/AppLayout";
+import ProtectedRoute from "./components/ProtectedRoute";
+import AdminRoute from "./components/AdminRoute";
+import StaffRoute from "./components/StaffRoute";
+
+// Public pages
+import Home from "./pages/Home";
+import Services from "./pages/Services";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import VerifyEmail from "./pages/VerifyEmail";
+import ForgotPassword from "./pages/ForgotPassword";
+import ResetPassword from "./pages/ResetPassword";
+import VerifyEmailChange from "./pages/VerifyEmailChange";
+import StaffInvitationSetup from "./pages/StaffInvitationSetup";
+import NotFound from "./pages/NotFound";
+import RequestWorkspace from "./pages/RequestWorkspace";
+
+// Customer pages
+import CustomerDashboard from "./pages/customer/CustomerDashboard";
+import MyServiceRequests from "./pages/customer/MyServiceRequests";
+
+// Shared authenticated account pages
+import Profile from "./pages/Profile";
+import ChangePassword from "./pages/ChangePassword";
+import ChangeEmail from "./pages/ChangeEmail";
+
+// Admin pages
+import AdminDashboard from "./pages/admin/AdminDashboard";
+import AdminUsers from "./pages/admin/AdminUsers";
+import AdminUserDetails from "./pages/admin/AdminUserDetails";
+import AdminCreateStaff from "./pages/admin/AdminCreateStaff";
+import AdminServices from "./pages/admin/AdminServices";
+import AdminServiceDetails from "./pages/admin/AdminServiceDetails";
+import AdminRequests from "./pages/admin/AdminRequests";
+
+// Staff pages
+import StaffDashboard from "./pages/staff/StaffDashboard";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    <BrowserRouter>
+      <AuthProvider>
+        <Routes>
+          {/* Shared navbar and footer */}
+          <Route element={<AppLayout />}>
+            {/* Public pages */}
+            <Route path="/" element={<Home />} />
+            <Route path="/services" element={<Services />} />
 
-      <div className="ticks"></div>
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+            <Route
+              path="/verify-email"
+              element={<VerifyEmail />}
+            />
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+            <Route
+              path="/forgot-password"
+              element={<ForgotPassword />}
+            />
+
+            <Route
+              path="/reset-password"
+              element={<ResetPassword />}
+            />
+
+            <Route
+              path="/verify-email-change"
+              element={<VerifyEmailChange />}
+            />
+
+            <Route
+              path="/staff/setup"
+              element={<StaffInvitationSetup />}
+            />
+
+            {/* Customer-only pages */}
+            <Route
+              element={
+                <ProtectedRoute allowedRoles={["customer"]} />
+              }
+            >
+              <Route
+                path="/customer/dashboard"
+                element={<CustomerDashboard />}
+              />
+
+              <Route
+                path="/my-requests"
+                element={<MyServiceRequests />}
+              />
+            </Route>
+
+            {/* Shared authenticated account pages */}
+            <Route
+              element={
+                <ProtectedRoute
+                  allowedRoles={["customer", "staff", "admin"]}
+                />
+              }
+            >
+              <Route
+                path="/profile"
+                element={<Profile />}
+              />
+
+              <Route
+                path="/change-password"
+                element={<ChangePassword />}
+              />
+
+              <Route
+                path="/change-email"
+                element={<ChangeEmail />}
+              />
+
+              {/* Shared request conversation and activity */}
+              <Route
+                path="/requests/:requestId/workspace"
+                element={<RequestWorkspace />}
+              />
+            </Route>
+
+            {/* Admin-only pages */}
+            <Route element={<AdminRoute />}>
+              <Route
+                path="/admin"
+                element={<AdminDashboard />}
+              />
+
+              <Route
+                path="/admin/users"
+                element={<AdminUsers />}
+              />
+
+              <Route
+                path="/admin/users/:id"
+                element={<AdminUserDetails />}
+              />
+
+              <Route
+                path="/admin/staff/new"
+                element={<AdminCreateStaff />}
+              />
+
+              <Route
+                path="/admin/services"
+                element={<AdminServices />}
+              />
+
+              <Route
+                path="/admin/services/:id"
+                element={<AdminServiceDetails />}
+              />
+
+              <Route
+                path="/admin/requests"
+                element={<AdminRequests />}
+              />
+            </Route>
+
+            {/* Staff-only pages */}
+            <Route element={<StaffRoute />}>
+              <Route
+                path="/staff/dashboard"
+                element={<StaffDashboard />}
+              />
+            </Route>
+
+            {/* Unknown URLs */}
+            <Route
+              path="*"
+              element={<NotFound />}
+            />
+          </Route>
+        </Routes>
+      </AuthProvider>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

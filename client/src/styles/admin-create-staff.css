@@ -1,0 +1,84 @@
+.admin-create-staff {
+  --acs-ink: #172033;
+  --acs-muted: #697586;
+  --acs-line: #e5eaf2;
+  --acs-violet: #6458e8;
+  --acs-violet-dark: #5045cf;
+  min-height: 62vh;
+  color: var(--acs-ink);
+  background: #f6f8fc;
+}
+
+.admin-create-staff .acs-page-header { max-width: 1500px; margin-inline: auto; }
+.admin-create-staff .acs-eyebrow { display: inline-flex; align-items: center; gap: 9px; color: #6259de; font-size: .72rem; font-weight: 800; letter-spacing: .13em; }
+.admin-create-staff .acs-eyebrow-dot { width: 8px; height: 8px; border-radius: 50%; background: #18b989; box-shadow: 0 0 0 4px rgba(24,185,137,.12); }
+.admin-create-staff .acs-title { color: #151d31; font-size: clamp(1.8rem, 3vw, 2.55rem); font-weight: 800; letter-spacing: -.045em; }
+.admin-create-staff .acs-subtitle { max-width: 680px; color: var(--acs-muted); font-size: 1rem; }
+.admin-create-staff .acs-secondary-button { border: 1px solid #d8deea; background: white; color: #384256; border-radius: 11px; padding: .72rem 1rem; font-weight: 650; box-shadow: 0 3px 10px rgba(25,37,62,.03); }
+.admin-create-staff .acs-secondary-button:hover { background: #f0f2ff; border-color: #c7c5fa; color: var(--acs-violet-dark); }
+.admin-create-staff .acs-panel, .admin-create-staff .acs-guide-panel { border: 1px solid var(--acs-line); border-radius: 20px; background: #fff; box-shadow: 0 12px 35px rgba(25,42,75,.055); overflow: hidden; }
+.admin-create-staff .acs-panel { padding: clamp(1.2rem, 2.5vw, 2rem); }
+.admin-create-staff .acs-panel-heading { display: flex; align-items: center; gap: 14px; padding-bottom: 1.4rem; margin-bottom: 1.5rem; border-bottom: 1px solid #edf0f6; }
+.admin-create-staff .acs-heading-icon { width: 48px; height: 48px; display: grid; place-items: center; border-radius: 15px; color: #6259de; background: linear-gradient(145deg, #f0efff, #e7e9ff); font-size: 1.25rem; flex: 0 0 auto; }
+.admin-create-staff .acs-panel-heading h2 { color: #202940; font-weight: 750; }
+.admin-create-staff .acs-panel-heading p { color: var(--acs-muted); font-size: .91rem; }
+.admin-create-staff .acs-form-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.15rem; }
+.admin-create-staff .acs-field .form-label { color: #303a4e; font-size: .9rem; font-weight: 700; margin-bottom: .55rem; }
+.admin-create-staff .acs-required { color: #dc4159; }
+.admin-create-staff .acs-optional { font-weight: 500; font-size: .76rem; color: #8791a2; background: #f2f4f8; padding: .22rem .48rem; border-radius: 99px; margin-left: .35rem; }
+.admin-create-staff .acs-input-wrap { display: flex; align-items: center; gap: 11px; border: 1px solid #dce2ed; border-radius: 12px; padding: 0 .9rem; min-height: 52px; background: #fff; transition: border-color .18s ease, box-shadow .18s ease, background .18s ease; }
+.admin-create-staff .acs-input-wrap > i { color: #929cb0; font-size: 1.05rem; flex: 0 0 auto; }
+.admin-create-staff .acs-input-wrap:focus-within { border-color: #8b85f2; box-shadow: 0 0 0 4px rgba(100,88,232,.11); background: #fdfdff; }
+.admin-create-staff .acs-input-wrap .form-control { min-width: 0; border: 0; box-shadow: none; border-radius: 0; padding: .78rem 0; background: transparent; color: #1c2538; }
+.admin-create-staff .acs-input-wrap .form-control:focus { box-shadow: none; }
+.admin-create-staff .acs-input-wrap .form-control::placeholder { color: #a3acbb; }
+.admin-create-staff .acs-field .form-text { color: #8791a2; font-size: .8rem; margin-top: .45rem; }
+.admin-create-staff .acs-security-note { display: flex; gap: 13px; padding: 1rem 1.1rem; border: 1px solid #dfe3ff; border-radius: 14px; background: linear-gradient(115deg, #f5f4ff, #f8fbff); }
+.admin-create-staff .acs-security-icon { width: 38px; height: 38px; display: grid; place-items: center; flex: 0 0 auto; color: #5b54d8; background: #e8e7ff; border-radius: 11px; font-size: 1.05rem; }
+.admin-create-staff .acs-security-note strong { display: block; color: #34336f; font-size: .9rem; margin-bottom: .25rem; }
+.admin-create-staff .acs-security-note p { color: #666b8b; font-size: .84rem; line-height: 1.55; }
+.admin-create-staff .acs-form-actions { display: flex; align-items: center; flex-wrap: wrap; gap: .8rem; }
+.admin-create-staff .acs-primary-button { min-height: 48px; padding: .75rem 1.15rem; border: 0; border-radius: 11px; color: #fff; background: linear-gradient(120deg, #6259e8, #7b56dd); font-weight: 750; box-shadow: 0 7px 16px rgba(98,89,232,.2); }
+.admin-create-staff .acs-primary-button:hover:not(:disabled) { color: #fff; background: linear-gradient(120deg, #5147d2, #6843c8); transform: translateY(-1px); box-shadow: 0 10px 20px rgba(98,89,232,.24); }
+.admin-create-staff .acs-primary-button:disabled { opacity: .7; }
+.admin-create-staff .acs-text-button { color: #687387; font-weight: 650; border-radius: 10px; }
+.admin-create-staff .acs-text-button:hover:not(:disabled) { background: #f2f4f9; color: #2d3850; }
+.admin-create-staff .acs-guide-panel { padding: 1.5rem; background: radial-gradient(circle at 100% 0%, rgba(125,104,245,.11), transparent 38%), #fff; }
+.admin-create-staff .acs-guide-top-icon { width: 50px; height: 50px; display: grid; place-items: center; color: #fff; background: linear-gradient(145deg, #6259e8, #8966ee); border-radius: 16px; font-size: 1.25rem; box-shadow: 0 8px 18px rgba(98,89,232,.22); margin-bottom: 1.2rem; }
+.admin-create-staff .acs-guide-kicker { color: #675dde; font-size: .7rem; font-weight: 850; letter-spacing: .14em; }
+.admin-create-staff .acs-guide-panel h2 { color: #202940; }
+.admin-create-staff .acs-guide-intro { color: var(--acs-muted); font-size: .9rem; line-height: 1.6; }
+.admin-create-staff .acs-steps { list-style: none; padding: 0; margin: 1.5rem 0; }
+.admin-create-staff .acs-steps li { position: relative; display: flex; gap: 12px; padding-bottom: 1.25rem; }
+.admin-create-staff .acs-steps li:last-child { padding-bottom: 0; }
+.admin-create-staff .acs-steps li:not(:last-child)::after { content: ""; position: absolute; left: 16px; top: 36px; bottom: 0; width: 1px; background: #dedfff; }
+.admin-create-staff .acs-step-number { position: relative; z-index: 1; width: 33px; height: 33px; display: grid; place-items: center; flex: 0 0 auto; color: #5f57d9; background: #efeeff; border: 1px solid #e2e0ff; border-radius: 50%; font-size: .85rem; font-weight: 800; }
+.admin-create-staff .acs-steps strong { color: #2b354a; display: block; font-size: .88rem; margin: .15rem 0 .35rem; }
+.admin-create-staff .acs-steps p { color: #7a8497; font-size: .82rem; line-height: 1.55; margin: 0; }
+.admin-create-staff .acs-guide-footnote { display: flex; align-items: flex-start; gap: 9px; padding: .9rem; border-radius: 12px; color: #6b7190; background: #f5f6fb; font-size: .77rem; line-height: 1.55; }
+.admin-create-staff .acs-guide-footnote i { color: #7772db; font-size: .95rem; margin-top: .1rem; flex: 0 0 auto; }
+.admin-create-staff .acs-alert { position: relative; display: flex; align-items: flex-start; gap: 12px; padding: 1rem 3rem 1rem 1rem; border-radius: 14px; border: 1px solid; }
+.admin-create-staff .acs-alert > i { font-size: 1.1rem; margin-top: .1rem; flex: 0 0 auto; }
+.admin-create-staff .acs-alert-error { color: #9d293c; border-color: #f2c7ce; background: #fff3f4; }
+.admin-create-staff .acs-alert-success { color: #176d50; border-color: #bdebd8; background: #effbf6; }
+.admin-create-staff .acs-alert-content { display: flex; flex-direction: column; gap: .25rem; min-width: 0; }
+.admin-create-staff .acs-alert-content strong { color: #135c45; }
+.admin-create-staff .acs-alert-content span { overflow-wrap: anywhere; }
+.admin-create-staff .acs-invited-email { font-weight: 750; }
+.admin-create-staff .acs-alert-dismiss { position: absolute; right: .8rem; top: .8rem; padding: .25rem; border: 0; background: transparent; color: currentColor; opacity: .65; }
+.admin-create-staff .acs-alert-dismiss:hover { opacity: 1; }
+
+@media (min-width: 768px) {
+  .admin-create-staff .acs-form-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .admin-create-staff .acs-field-full { grid-column: 1 / -1; }
+}
+@media (min-width: 1200px) {
+  .admin-create-staff .acs-guide-panel { position: sticky; top: 1.25rem; }
+}
+@media (max-width: 575.98px) {
+  .admin-create-staff { padding-top: 1.5rem !important; }
+  .admin-create-staff .acs-panel, .admin-create-staff .acs-guide-panel { border-radius: 16px; }
+  .admin-create-staff .acs-form-actions { align-items: stretch; }
+  .admin-create-staff .acs-primary-button { width: 100%; }
+  .admin-create-staff .acs-text-button { width: 100%; }
+}

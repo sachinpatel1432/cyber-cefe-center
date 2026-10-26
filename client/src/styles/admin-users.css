@@ -1,0 +1,116 @@
+/* CyberDesk Admin Users — scoped styling; Bootstrap remains the base system. */
+.cyber-admin-users {
+  --au-ink: #172033;
+  --au-muted: #718096;
+  --au-line: #e7ebf3;
+  --au-surface: #ffffff;
+  color: var(--au-ink);
+}
+.cyber-admin-users .admin-users-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 174px;
+  padding: clamp(1.35rem, 3vw, 2.2rem);
+  border: 1px solid rgba(119, 139, 255, .22);
+  border-radius: 24px;
+  color: #fff;
+  background: radial-gradient(circle at 85% 0%, rgba(102, 120, 255, .32), transparent 32%), linear-gradient(120deg, #10172b 0%, #192443 58%, #242d55 100%);
+  box-shadow: 0 18px 42px rgba(21, 31, 61, .12);
+}
+.cyber-admin-users .admin-users-hero::after {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  right: -68px;
+  bottom: -172px;
+  z-index: -1;
+  border: 1px solid rgba(255,255,255,.13);
+  border-radius: 50%;
+  box-shadow: 0 0 0 28px rgba(255,255,255,.025), 0 0 0 58px rgba(255,255,255,.02);
+}
+.cyber-admin-users .admin-users-hero-copy { max-width: 740px; }
+.cyber-admin-users .admin-users-breadcrumb,
+.cyber-admin-users .admin-users-breadcrumb a { color: #cbd5ef !important; }
+.cyber-admin-users .admin-users-hero h1 { color: #fff; font-size: clamp(1.8rem, 3vw, 2.45rem); letter-spacing: -.035em; }
+.cyber-admin-users .admin-users-hero p { color: #bac5df; max-width: 620px; }
+.cyber-admin-users .admin-users-eyebrow,
+.cyber-admin-users .admin-users-section-kicker {
+  display: inline-flex;
+  align-items: center;
+  color: #6d7df9;
+  font-size: .7rem;
+  line-height: 1.2;
+  letter-spacing: .13em;
+  font-weight: 800;
+}
+.cyber-admin-users .admin-users-eyebrow { margin: 0 0 .65rem; color: #aab7ff; }
+.cyber-admin-users .admin-users-hero .btn { border-radius: 11px; font-weight: 650; padding: .7rem 1rem; }
+.cyber-admin-users .admin-users-hero .btn-primary { border-color: #7380ff; background: linear-gradient(135deg, #6578f7, #7859e8); box-shadow: 0 7px 18px rgba(94, 105, 238, .22); }
+.cyber-admin-users .admin-users-hero .btn-outline-secondary { color: #eef2ff; border-color: rgba(255,255,255,.32); background: rgba(255,255,255,.045); }
+.cyber-admin-users .admin-users-stat-card,
+.cyber-admin-users .admin-users-search-card,
+.cyber-admin-users .admin-users-table-card {
+  background: var(--au-surface);
+  border: 1px solid var(--au-line) !important;
+  box-shadow: 0 5px 19px rgba(24, 39, 75, .045) !important;
+}
+.cyber-admin-users .admin-users-stat-card { transition: transform .18s ease, box-shadow .18s ease; }
+.cyber-admin-users .admin-users-stat-card:hover { transform: translateY(-3px); box-shadow: 0 12px 27px rgba(24,39,75,.09) !important; }
+.cyber-admin-users .admin-users-stat-card .card-body { padding: 1.25rem; }
+.cyber-admin-users .admin-users-stat-card p { font-size: .82rem; font-weight: 650; color: var(--au-muted) !important; }
+.cyber-admin-users .admin-users-stat-card h3 { letter-spacing: -.035em; font-size: clamp(1.5rem, 2.5vw, 2rem); }
+.cyber-admin-users .admin-users-analytics { margin-top: 1.6rem; }
+.cyber-admin-users .admin-users-section-heading { margin-bottom: .9rem; }
+.cyber-admin-users .admin-users-section-heading h2 { margin-top: .35rem; letter-spacing: -.025em; }
+.cyber-admin-users .admin-users-section-heading p { font-size: .9rem; }
+.cyber-admin-users .admin-users-data-note { display: inline-flex; align-items: center; border-radius: 999px; border: 1px solid #e1e7f6; background: #f7f9ff; color: #61708a; padding: .46rem .75rem; font-size: .77rem; font-weight: 650; }
+.cyber-admin-users .admin-users-chart-card { padding: 1.3rem 1.35rem; border: 1px solid var(--au-line); border-radius: 19px; background: linear-gradient(180deg, #fff 0%, #fcfdff 100%); box-shadow: 0 5px 19px rgba(24,39,75,.04); }
+.cyber-admin-users .admin-users-chart-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; margin-bottom: 1.55rem; }
+.cyber-admin-users .admin-users-chart-heading h3 { font-size: 1rem; font-weight: 800; margin: 0 0 .32rem; }
+.cyber-admin-users .admin-users-chart-heading p { margin: 0; color: var(--au-muted); font-size: .82rem; }
+.cyber-admin-users .admin-users-chart-icon { width: 42px; height: 42px; display: inline-flex; align-items: center; justify-content: center; flex: 0 0 auto; border-radius: 13px; color: #6075f5; background: #eef1ff; font-size: 1.2rem; }
+.cyber-admin-users .admin-users-chart-icon-green { color: #13978d; background: #e7f8f5; }
+.cyber-admin-users .admin-users-metric-bars { display: flex; flex-direction: column; gap: 1.15rem; }
+.cyber-admin-users .admin-users-metric-meta { display: flex; align-items: center; justify-content: space-between; gap: .75rem; margin-bottom: .48rem; font-size: .85rem; }
+.cyber-admin-users .admin-users-metric-meta span { display: flex; align-items: center; gap: .55rem; color: #5f6d82; font-weight: 650; }
+.cyber-admin-users .admin-users-metric-meta span i { width: 9px; height: 9px; border-radius: 3px; display: inline-block; }
+.cyber-admin-users .admin-users-metric-meta strong { color: #202b41; font-size: .9rem; }
+.cyber-admin-users .admin-users-metric-track { height: 9px; overflow: hidden; border-radius: 999px; background: #edf1f7; }
+.cyber-admin-users .admin-users-metric-track span { display: block; height: 100%; border-radius: inherit; transition: width .35s ease; }
+.cyber-admin-users .admin-users-search-card { border-radius: 18px; }
+.cyber-admin-users .admin-users-search-card .card-body { padding: 1.2rem 1.3rem; }
+.cyber-admin-users .admin-users-search-card .form-label { font-size: .83rem; color: #49566b; }
+.cyber-admin-users .admin-users-search-card .form-control,
+.cyber-admin-users .admin-users-search-card .input-group-text { min-height: 44px; border-color: #dde4ef; background: #fff; }
+.cyber-admin-users .admin-users-search-card .form-control:focus { border-color: #9aa9ff; box-shadow: 0 0 0 .2rem rgba(102,120,245,.12); }
+.cyber-admin-users .admin-users-search-card .btn { min-height: 44px; border-radius: 10px; font-weight: 650; }
+.cyber-admin-users .admin-users-table-card { border-radius: 19px !important; }
+.cyber-admin-users .admin-users-table-card > .border-bottom,
+.cyber-admin-users .admin-users-table-card > .border-top { border-color: var(--au-line) !important; }
+.cyber-admin-users .admin-users-table-card > div:first-child { background: #fff; }
+.cyber-admin-users .admin-users-table { min-width: 1020px; }
+.cyber-admin-users .admin-users-table thead th { background: #f6f8fc; color: #68758a; border-bottom: 1px solid #e5eaf2; font-size: .72rem; letter-spacing: .055em; text-transform: uppercase; font-weight: 800; white-space: nowrap; }
+.cyber-admin-users .admin-users-table tbody td { border-color: #edf0f6; padding-top: 1rem; padding-bottom: 1rem; vertical-align: middle; }
+.cyber-admin-users .admin-users-table tbody tr { transition: background .15s ease; }
+.cyber-admin-users .admin-users-table tbody tr:hover { background: #f8faff; }
+.cyber-admin-users .admin-users-table .btn { border-radius: 8px; font-weight: 650; }
+.cyber-admin-users .admin-users-table .badge { padding: .45rem .58rem; font-weight: 700; }
+.cyber-admin-users .admin-users-table-card .btn-outline-primary,
+.cyber-admin-users .admin-users-table-card .btn-outline-secondary { border-color: #d6deed; }
+.cyber-admin-users .admin-users-table-card .card-footer,
+.cyber-admin-users .admin-users-table-card > .d-flex:last-child { background: #fff; }
+.cyber-admin-users .alert { border-radius: 13px; }
+@media (max-width: 767.98px) {
+  .cyber-admin-users .admin-users-hero { border-radius: 18px; padding: 1.25rem; align-items: stretch !important; }
+  .cyber-admin-users .admin-users-hero > .d-flex { width: 100%; }
+  .cyber-admin-users .admin-users-hero .btn { flex: 1 1 auto; }
+  .cyber-admin-users .admin-users-stat-card .card-body { padding: 1rem; }
+  .cyber-admin-users .admin-users-chart-card { padding: 1.1rem; }
+  .cyber-admin-users .admin-users-data-note { max-width: 100%; white-space: normal; }
+  .cyber-admin-users .admin-users-search-card .btn { flex: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cyber-admin-users * { transition: none !important; scroll-behavior: auto !important; }
+}
