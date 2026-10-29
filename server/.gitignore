@@ -1,0 +1,105 @@
+# ==========================================
+# Dependencies
+# ==========================================
+node_modules/
+**/node_modules/
+
+# ==========================================
+# Environment variables & secrets
+# ==========================================
+.env
+.env.*
+!.env.example
+!.env.sample
+
+# Private credentials and keys
+*.pem
+*.key
+*.p12
+*.pfx
+secrets/
+credentials/
+
+# ==========================================
+# Build output
+# ==========================================
+dist/
+build/
+out/
+coverage/
+.vite/
+.vercel/
+.netlify/
+
+# ==========================================
+# Logs
+# ==========================================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ==========================================
+# Cache & temporary files
+# ==========================================
+.cache/
+.tmp/
+temp/
+tmp/
+.eslintcache
+.stylelintcache
+*.tsbuildinfo
+
+# ==========================================
+# Uploaded files & local storage
+# ==========================================
+uploads/*
+!uploads/.gitkeep
+
+storage/*
+!storage/.gitkeep
+
+# ==========================================
+# Database dumps & backups
+# ==========================================
+dump/
+dumps/
+backup/
+backups/
+*.dump
+*.bson
+*.sqlite
+*.sqlite3
+
+# ==========================================
+# Operating system files (macOS)
+# ==========================================
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100/
+.Trashes/
+
+# ==========================================
+# Editors & IDEs
+# ==========================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ==========================================
+# Test artifacts
+# ==========================================
+playwright-report/
+test-results/
+.nyc_output/
+
+# ==========================================
+# Local configuration
+# ==========================================
+*.local

@@ -1,4 +1,3 @@
-
 import {
   useEffect,
   useMemo,
@@ -115,16 +114,26 @@ function formatRole(role) {
     );
 }
 
-// User model: profileImage = { url, publicId }
+// Robust helper to resolve profile image from any backend schema format
 function getProfileImageUrl(user) {
-  const image = user?.profileImage;
+  if (!user) return "";
 
-  if (typeof image === "string") {
-    return image.trim();
-  }
+  const image =
+    user.profileImage ||
+    user.profileImageUrl ||
+    user.avatar ||
+    user.avatarUrl ||
+    user.photo ||
+    user.photoURL ||
+    user.imageUrl ||
+    user.imageURL ||
+    user.src ||
+    user.path;
 
-  if (image && typeof image === "object") {
-    const url =
+  if (!image) return "";
+
+  if (typeof image === "object") {
+    const nestedUrl =
       image.url ||
       image.secure_url ||
       image.imageUrl ||
@@ -132,19 +141,14 @@ function getProfileImageUrl(user) {
       image.src ||
       image.path;
 
-    return typeof url === "string" ? url.trim() : "";
+    return typeof nestedUrl === "string" ? nestedUrl.trim() : "";
   }
 
-  // Compatibility with older user response formats
-  const fallback =
-    user?.profileImageUrl ||
-    user?.avatarUrl ||
-    user?.photoURL ||
-    user?.imageUrl;
+  if (typeof image === "string") {
+    return image.trim();
+  }
 
-  return typeof fallback === "string"
-    ? fallback.trim()
-    : "";
+  return "";
 }
 
 function ProfileAvatar({ user, large = false }) {
